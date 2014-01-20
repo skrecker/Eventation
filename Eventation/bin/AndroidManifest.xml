@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shawnkrecker.eventation"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.shawnkrecker.eventation.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.shawnkrecker.eventation.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/eventation_icon"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.shawnkrecker.eventation.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.shawnkrecker.eventation.GCMIntentService" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.shawnkrecker.eventation" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.shawnkrecker.eventation" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.shawnkrecker.eventation.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.shawnkrecker.eventation.MainActivity"
+            android:label="@string/title_activity_group" >
+        </activity>
+
+        <service
+            android:name="com.shawnkrecker.eventation.SignInService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name="com.shawnkrecker.eventation.SignInActivity"
+            android:label="@string/signin" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.SignUpActivity"
+            android:label="@string/signup" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.SignInSignUp"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="com.shawnkrecker.eventation.SignUpIntentService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="com.shawnkrecker.eventation.SignUpTask"
+            android:label="@string/title_activity_sign_up_task" >
+        </activity>
+        <activity android:name="com.shawnkrecker.eventation.LogOutActivity" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.CreateGroupActivity"
+            android:label="@string/title_activity_create_group" >
+        </activity>
+        <activity android:name="com.shawnkrecker.eventation.MyGroupsSQLiteHelper" >
+        </activity>
+        <activity android:name="com.shawnkrecker.eventation.MyEventsSQLiteHelper" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.GroupViewActivity"
+            android:label="@string/title_activity_group_view" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.CreateEventActivity"
+            android:label="@string/title_activity_create_event" >
+        </activity>
+
+        <service
+            android:name="com.shawnkrecker.eventation.GcmBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="com.shawnkrecker.eventation.GcmIntentService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="com.shawnkrecker.eventation.FindGroupActivity"
+            android:label="@string/find_group" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.GroupSignUpActivity"
+            android:label="@string/title_activity_group_sign_up" >
+        </activity>
+        <activity
+            android:name="com.shawnkrecker.eventation.GroupSubscriberSQLiteHelper"
+            android:label="@string/title_activity_group_subscriber_sqlite_helper" >
+        </activity>
+    </application>
+
+</manifest>

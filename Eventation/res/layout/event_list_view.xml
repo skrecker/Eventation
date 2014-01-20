@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@drawable/gray_gradient" >
+
+    <RelativeLayout
+        android:id="@+id/calendar_date"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/list_margin"
+        android:background="@color/eventblue" >
+
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/day"
+            android:layout_alignRight="@+id/year"
+            android:gravity="center"
+            android:hint="@string/month"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/day_size" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/month"
+            android:gravity="center"
+            android:hint="@string/day"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/day"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/day"
+            android:layout_below="@+id/day"
+            android:gravity="center"
+            android:hint="@string/year"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="8sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+     
+        android:paddingLeft="20dp"
+        android:textColor="@color/gray"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@id/calendar_date"
+        android:hint="@string/title" />
+
+</RelativeLayout>

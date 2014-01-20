@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+      
+      <style name="CustomActionBarTheme" 
+        parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:listViewStyle">@style/CustomListView</item>
+       
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/blue_gradient</item>
+    </style>
+    
+    <style name="CustomListView"
+    	parent="android:Widget.Holo.Light.ListView">
+        <item name="android:background">@color/gray</item>
+        <item name="android:textColor">@color/eventblue</item>
+        
+    </style>
+    
+    
+</resources>

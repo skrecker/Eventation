@@ -1,0 +1,69 @@
+# view AndroidManifest.xml #generated:45
+-keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.shawnkrecker.eventation.CreateEventActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.shawnkrecker.eventation.CreateGroupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.shawnkrecker.eventation.FindGroupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.shawnkrecker.eventation.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:115
+-keep class com.shawnkrecker.eventation.GcmBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:120
+-keep class com.shawnkrecker.eventation.GcmIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.shawnkrecker.eventation.GroupSignUpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:133
+-keep class com.shawnkrecker.eventation.GroupSubscriberSQLiteHelper { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.shawnkrecker.eventation.GroupViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.shawnkrecker.eventation.LogOutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:63
+-keep class com.shawnkrecker.eventation.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:104
+-keep class com.shawnkrecker.eventation.MyEventsSQLiteHelper { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class com.shawnkrecker.eventation.MyGroupsSQLiteHelper { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.shawnkrecker.eventation.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.shawnkrecker.eventation.SignInActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.shawnkrecker.eventation.SignInService { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.shawnkrecker.eventation.SignInSignUp { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class com.shawnkrecker.eventation.SignUpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.shawnkrecker.eventation.SignUpIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:92
+-keep class com.shawnkrecker.eventation.SignUpTask { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.shawnkrecker.eventation.StartActivity { <init>(...); }
+
+# onClick res/layout/activity_sign_in.xml #generated:49
+-keepclassmembers class * { *** signIn(...); }
+

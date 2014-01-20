@@ -1,0 +1,198 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://event-ation.appspot.com/_ah/api",
+  "name" : "groupsubscribersendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://event-ation.appspot.com/_ah/spi",
+    "deadline" : 10.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "shawnkrecker.com",
+  "ownerName" : "shawnkrecker.com",
+  "packagePath" : "eventation",
+  "methods" : {
+    "groupsubscribersendpoint.listGroupSubscribers" : {
+      "path" : "groupsubscribers",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.shawnkrecker.eventation.GroupSubscribersEndpoint.listGroupSubscribers",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "groupsubscribersendpoint.insertGroupSubscribers" : {
+      "path" : "groupsubscribers",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.shawnkrecker.eventation.GroupSubscribersEndpoint.insertGroupSubscribers",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "groupsubscribersendpoint.getGroupSubscribers" : {
+      "path" : "groupsubscribers/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.shawnkrecker.eventation.GroupSubscribersEndpoint.getGroupSubscribers",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "groupsubscribersendpoint.updateGroupSubscribers" : {
+      "path" : "groupsubscribers",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.shawnkrecker.eventation.GroupSubscribersEndpoint.updateGroupSubscribers",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "groupsubscribersendpoint.removeGroupSubscribers" : {
+      "path" : "groupsubscribers/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.shawnkrecker.eventation.GroupSubscribersEndpoint.removeGroupSubscribers",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "CollectionResponse_GroupSubscribers" : {
+        "id" : "CollectionResponse_GroupSubscribers",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "GroupSubscribers"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GroupSubscribers" : {
+        "id" : "GroupSubscribers",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "groupID" : {
+            "type" : "string"
+          },
+          "userID" : {
+            "type" : "string"
+          },
+          "regID" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.shawnkrecker.eventation.GroupSubscribersEndpoint.listGroupSubscribers" : {
+        "response" : {
+          "$ref" : "CollectionResponse_GroupSubscribers"
+        }
+      },
+      "com.shawnkrecker.eventation.GroupSubscribersEndpoint.insertGroupSubscribers" : {
+        "request" : {
+          "$ref" : "GroupSubscribers"
+        },
+        "response" : {
+          "$ref" : "GroupSubscribers"
+        }
+      },
+      "com.shawnkrecker.eventation.GroupSubscribersEndpoint.getGroupSubscribers" : {
+        "response" : {
+          "$ref" : "GroupSubscribers"
+        }
+      },
+      "com.shawnkrecker.eventation.GroupSubscribersEndpoint.updateGroupSubscribers" : {
+        "request" : {
+          "$ref" : "GroupSubscribers"
+        },
+        "response" : {
+          "$ref" : "GroupSubscribers"
+        }
+      },
+      "com.shawnkrecker.eventation.GroupSubscribersEndpoint.removeGroupSubscribers" : {
+      }
+    }
+  }
+}
